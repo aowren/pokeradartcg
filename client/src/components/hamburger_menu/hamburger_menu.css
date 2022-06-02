@@ -1,0 +1,22 @@
+.hamburger-menu {
+    font-size: 2rem;
+    color: #3c5aa6;
+    border: none;
+    background-color: transparent;
+    margin-top: 8px;
+}
+
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+
+.hamburger-menu:active {
+    
+}
+
+@media (min-width: 906px) {
+    .hamburger-menu {
+       display: none;
+    } 
+}
+

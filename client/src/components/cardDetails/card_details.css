@@ -1,0 +1,243 @@
+ body {
+    /* min-height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+
+
+} 
+
+.card-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 70px;
+    /* flex-grow: 1; */
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    /* height: 900px; */
+
+}
+
+.card-details-container-left {
+    /* border: 1px solid greenyellow; */
+    width: 300px;
+    height: 700px;
+    text-align: center;
+}
+
+.card-details-container-right {
+    /* width: 60%; */
+    /* position: relative; */
+    /* left: 10%; */
+    /* border: 1px solid red; */
+    height: 700px;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.large-image-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.card-description {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.card-description li {
+    list-style-type: none;
+    position: relative;
+    top: 30%;
+    /* color: rgb(107, 107, 107); */
+}
+
+.release-date {
+    margin-top: 30px;
+}
+
+.market-data {
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid purple; */
+    margin-top: 30px;
+}
+
+.market-data li {
+    /* font-size: 1.5rem; */
+    list-style-type: none;
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: center;
+}
+
+.market-data li span {
+    font-size: 1.5rem;
+}
+
+.last-updated {
+    font-size: 1.4rem;
+}
+
+.details-btn {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    margin-top: 10px;
+    /* padding-bottom: 5px; */
+}
+
+.details-btn button {
+    /* padding: 2px 5px; */
+    margin: 5px;
+    margin-top: 30px;
+    font-size: 3rem;
+    color: rgb(34, 34, 34);
+    /* background-color: #489eee; */
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.details-btn button:hover {
+    cursor: pointer;
+    color: #ee1515;
+}
+
+.details-btn button:active {
+    transform: rotate(30deg);    
+}
+
+.large-image-container img{
+    align-items: flex-end;
+    height: auto;
+    width: 70%;
+    /* border: 1px solid blue; */
+    /* right: 40%; */
+}
+
+@media (max-width: 1140px) {
+
+    .card-details-container {
+        /* border: 1px dashed black; */
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-top: 70px;
+        /* flex-grow: 1; */
+        /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+        /* height: 900px; */
+    
+    }
+
+    .card-details-container-left {
+        width: 350px;
+        height: 700px;
+        text-align: center;
+    }
+    
+
+    .card-details-container-right {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        margin-top: -70px;
+    }
+
+    .large-image-container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .large-image-container img{
+        align-items: flex-end;
+        height: auto;
+        width: 55%;
+    }
+
+    .details-btn button {
+        margin: 5px;
+        margin-top: 30px;
+        font-size: 2.5rem;
+        color: rgb(34, 34, 34);
+        background-color: #fff;
+        border-radius: 3px;
+        border: none;
+        transition: all 0.2s ease;
+    }
+
+    .last-updated {
+        font-size: 1.2rem;
+    }
+    
+
+}
+
+@media (max-width: 500px) {
+
+    .card-details-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        margin-top: 70px;
+    }
+
+    .card-details-container-right {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        margin-top: -70px;
+        /* margin-top: -70px; */
+    }
+
+    .card-details-container-left {
+        width: 350px;
+        height: 700px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .last-updated {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .card-details-container-right {
+        height: 220px;
+        display: flex;
+        align-items: center;
+        margin-top: -20px;
+        
+    }
+
+    .release-date {
+        margin-top: 15px;
+    }
+    
+    .market-data {
+        text-align: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    
+    
+
+    
+}

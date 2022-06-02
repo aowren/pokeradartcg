@@ -1,0 +1,40 @@
+.not-searching-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 10%; */
+    text-align: center;
+}
+
+.not-searching-header {
+    font-size: 2rem;
+    margin-top: 5%;
+}
+
+.pikachu-gif {
+    margin-top: 8%;
+}
+
+@media(max-width: 500px) {
+    .not-searching-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin-top: 10%; */
+        text-align: center;
+    }
+
+    .not-searching-header {
+        font-size: 1.5rem;
+        margin-top: 5%;
+        padding: 10px;
+    }
+
+    .pikachu-gif {
+        width: 300px;
+        height: auto;
+    }
+    
+}

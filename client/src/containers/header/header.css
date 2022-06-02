@@ -1,0 +1,76 @@
+
+/*
+body {
+    width: 100vw;
+    height: 70px;
+    background-color: #fff; 
+    background-color: black;
+    overflow: hidden; 
+    display: flex; 
+} 
+*/
+
+.header-container {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+     
+}
+
+
+/* this is affecting the whole dom, change this to just the header, fix the app.css and it will potentially solve the page being too wide */
+
+#header-profile-container {
+    /* background-color: #3c5aa6; */
+    /* float: right; */
+    /* margin-top: -50px; */
+    display: flex;
+    /* justify-content: flex-end; */
+    /* border: 1px solid red; */
+
+}
+
+#header-logout-button {
+    color: white;
+    font-size: 1rem;
+    padding: 3px;
+    background-color: #3c5aa6;
+    border: none;
+    border-radius: 3px;
+}
+
+#header-logout-button:hover {
+    cursor: pointer;
+}
+
+#header-logout-button:active {
+    transform: scale(0.97);
+}
+
+#header-profile {
+    color: rgb(100, 100, 100);
+    margin-right: 10px;
+}
+
+@media (max-width: 350px) {
+    
+    .header-container {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+     
+}
+
+
+}
+
+@media (max-width: 760px) {
+
+    #header-logout-button {
+        display: none;
+    }
+}

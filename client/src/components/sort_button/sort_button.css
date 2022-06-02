@@ -1,0 +1,29 @@
+.sort-button {
+    font-size: 1rem;
+    border: none;
+    /* background-color: #6e6e6e; */
+    background-color: #3c5aa6;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.sort-button:hover {
+    cursor: pointer;
+}
+
+@media(max-width: 500px) {
+    .sort-button {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media (max-width: 540px) {
+    .sort-button {
+        /* margin-left: 0px; */
+
+    }
+}

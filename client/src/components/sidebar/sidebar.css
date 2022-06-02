@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%; 
+    top: 0;
+    float: left;
+    position: relative;
+    background-color: #3c5aa6;
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-list {
+    padding: 0;
+    padding-top: 5px;
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+} 
+
+.close-sidebar {
+    display: none;
+}
+
+/*.sidebar-list .row {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+} */
+
+/*.sidebar-list .row:hover{
+    color: #ffcb05;
+}
+
+.sidebar-list #active {
+    color: #c7a008;
+} */
+
+
+
+/*.row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title {
+    flex: 70%;
+} */
+
+#sidebar-title {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    padding-top: 20px;
+}
+
+#sidebar-title:hover {
+    color: #ffcb05;
+}
+
+#sidebar-profile {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    /* border: 1px solid white; */
+    margin-bottom: 20px;
+    
+}
+
+#sidebar-profile-header {
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+
+@media (max-width: 905px) {
+    .sidebar {
+        /* display: none; */
+        position: fixed;
+        z-index: 100;
+        transition: 0.3s ease;
+    }
+
+    .close-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        background-color: #3c5aa6;
+        border: none;
+        color: white;
+        position: relative;
+        bottom: 332px;
+        left: 20px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .close-sidebar:active {
+
+    }
+
+    .close-sidebar:hover {
+        color: #ffcb05;
+
+    }
+}

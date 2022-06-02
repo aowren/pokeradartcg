@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.form-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    /* border: 1px solid white; */
+}
+
+.form-heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    color: white
+} 
+
+.form,
+.content {
+  width: 50%;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+/* .background-image .img{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+} */
+
+/* ACTUAL */
+/* #bg-video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+} */
+
+/* tester */
+#bg-video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* height: 0; */
+    /* padding: 56.25%; */
+}
+
+/* .login-header ul {
+    list-style-type: none;
+} */
+
+.register-header {
+    background-color: transparent;
+    /* color: #ffcb05; */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2.5rem;
+    /* -webkit-text-stroke-width: 0.01px;
+    -webkit-text-stroke-color: rgb(94, 94, 94); */
+    padding-left: 10px;
+}
+
+.register-link {
+    padding-right: 10px;
+    /* color: #ffcb05; */
+    color: white;
+    font-size: 1.5rem;
+    display: inline;
+}
+
+#login {
+    padding: 18px;
+}
+
+.login-btn {
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #2a75bb;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+}
+
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 560px) {
+
+    .form-heading {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        color: white
+    } 
+    
+    .form,
+    .content {
+      width: 70%;
+      margin: 0 auto;
+      z-index: 1000;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+    width: 100000% !important;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    }
+    
+
+    .register-header {
+        background-color: transparent;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 1.8rem !important;
+        padding-left: 10px;
+    }
+    
+    .register-link {
+        padding-right: 10px;
+        color: white;
+        font-size: 1.5rem;
+        display: inline;
+    }
+    
+    #login {
+        padding: 18px;
+    }
+    
+    .login-btn {
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+        background-color: #2a75bb;
+        border: none;
+        border-radius: 5px;
+    }
+    
+}
+
+@media (max-width: 400px) {
+
+    .form-heading {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.2rem !important;
+        font-weight: 700;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        color: white
+    } 
+    
+    .form,
+    .content {
+      width: 70%;
+      margin: 0 auto;
+      z-index: 1000;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+    width: 100% !important;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    }
+    
+
+    .register-header {
+        background-color: transparent;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 1.5rem !important;
+        padding-left: 10px;
+    }
+    
+    .register-link {
+        padding-right: 10px;
+        color: white;
+        font-size: 1.4rem;
+        display: inline;
+    }
+    
+    #login {
+        padding: 18px;
+    }
+    
+    .login-btn {
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+        background-color: #2a75bb;
+        border: none;
+        border-radius: 5px;
+    }
+    
+}
+
+
