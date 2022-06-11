@@ -1,14 +1,25 @@
 import express from 'express';
 const router = express.Router();
 import { registerUser, loginUser, getMe, deleteUser, changePassword } from '../controllers/users.js';
+import { getFavorites, addToFavorites, removeFromFavorites } from '../controllers/favorites.js';
+
 import { protect } from '../middleware/authMiddleware.js';
+
 
 
 router.post('/', registerUser)
 router.post('/login', loginUser)
 router.get('/me', protect, getMe)
-router.delete('/:id', protect, deleteUser)
+//router.delete('/:id', protect, deleteUser)
 router.put('/changepassword', protect, changePassword)
+
+
+// Collection routes
+
+// Favorites routes
+router.get('/favorites', protect, getFavorites)
+router.post('/favorites', protect, addToFavorites)
+router.delete('/favorites/:id', protect, removeFromFavorites)
 
 export default router;
 

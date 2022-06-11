@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
 
+//mongoose.set('debug', true);
+
+
 const userSchema = mongoose.Schema({
     email: {
         type: String,
@@ -19,14 +22,20 @@ const userSchema = mongoose.Schema({
         maxlength: 255,
         // unique: true,
     },
-    /*id: {
-        type: String
-    }, */
+    favorites: [Object],
+    // favorites: [{
+    //     id: String,
+    //     name: String,
+    //     //supertype: String,
+        
+
+    // }],
+    collected: [Object]
 },
 {
     timestamps: true
 });
 
-const UsersModel = mongoose.model("users", userSchema);
+const UsersModel = mongoose.model("users", userSchema, "users");
 
 export default UsersModel;

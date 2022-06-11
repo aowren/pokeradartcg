@@ -42,11 +42,51 @@ router.get('/', (req, res) => {
     const cardName = req.query.searchInput;
     pokemon.card.all({ q:`name:${cardName}` })
     .then((cards) => {
-        console.log(req)
-        console.log(cards);
+        //console.log(req)
+       // console.log(cards);
         res.send(cards);
     })
 }) 
+
+
+// User Favorites API call
+// router.post('/favorites', (req, res) => {
+//     const favoritesArray = req.body.data.favoritesData 
+//     const returnFavoritesArray = []
+
+//     for (let i = 0; i < favoritesArray.length; i++) {
+//         (async function processFavorites() {
+//             let result;
+//             const promises = [];
+            
+//             for (let i = 0; i < favoritesArray.length; i++) {
+//                 promises.push(pokemon.card.find(favoritesArray[i]));
+//             }
+
+//             result = await Promise.all(promises);
+//             returnFavoritesArray.push(result[i]);
+//         })();
+//     }
+
+//     // Promise.all(returnFavoritesArray).then(() => {
+//     //     console.log(returnFavoritesArray)
+//     //     res.send(returnFavoritesArray)
+//     // }).catch(error => {
+//     //     console.log(error)
+//     // })
+
+//     console.log(returnFavoritesArray);
+//     res.send(returnFavoritesArray);
+// })
+
+
+// pokemon.card.find(returnFavoritesArray) 
+// .then((cards) => {
+//     //console.log(req)
+//     console.log(cards)
+//     res.send(cards)
+// })
+
 
 /*** TEST ROUTE ***/
 

@@ -3,8 +3,6 @@ import jwt from 'jsonwebtoken';
 import UsersModel from '../models/users.model.js';
 import asyncHandler from 'express-async-handler'
 
-
-
 // Register User
 export const registerUser = asyncHandler(async (req, res) => {
     const { username, email, password } = req.body
@@ -12,6 +10,11 @@ export const registerUser = asyncHandler(async (req, res) => {
     if (!username || !email || !password) {
         res.status(400)
         throw new Error('Please add all fields')
+    }
+
+    if (password.length < 6) {
+        res.status(400)
+        throw new Error('Password must be at least 6 characters')
     }
 
     // Check if user exists
