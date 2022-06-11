@@ -49,8 +49,8 @@ export const SidebarData = [
         path:'#',
         subNav: [                     // import set names here // put checkbox in subnav
             {
-                //title: newSetNameArr[0], //only one title allowed?
-                title: 'test'
+                title: newSetNameArr[1], //only one title allowed?
+                //title: 'test'
             },
         ],
     },
@@ -74,8 +74,9 @@ export const SidebarData = [
     },
     {
         title: 'Favorites',
-        path: '/favorites',
-        icon: <CgIcons.CgCardHearts />
+        path: '/',
+        favorites: 'favorites',
+        icon: <CgIcons.CgCardHearts /> //onClick, return all user favorites || have a seperate favorites page?
     },
     {
         title: 'Profile',

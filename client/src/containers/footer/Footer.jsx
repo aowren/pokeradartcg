@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css';
+import footerbg from '../../content/footerbg.png'
 import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
@@ -13,11 +14,13 @@ const Footer = () => {
 
     return (
         <footer className='footer-container'>
+            <div className='bgfooter' style={{ backgroundImage: `url(${footerbg})`}}>
             <div className='footer-content'>
                 <ul>
                     <li className='list-header'>PokéRadar </li>
                     <li className='list-content'>Contact:</li>
                 </ul>
+            </div>
             </div>
         </footer>
     )

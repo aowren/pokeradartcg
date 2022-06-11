@@ -17,11 +17,11 @@ export default function Cards({ cards }) {
 
     const dispatch = useDispatch();
     
-    const {isFavorite} = useSelector((state) => state.favorites)
+    //const {isFavorite} = useSelector((state) => state.favorites)
 
     const addFavorite = () => {
 
-        const cardID = cards.id
+        //const cardID = cards.id
         
         // if (isFavorite) {
         //     dispatch(removeFromFavorites(cardID))
@@ -29,13 +29,14 @@ export default function Cards({ cards }) {
         //     dispatch(addToFavorites(cardID))
         // }
 
-       dispatch(addToFavorites(cardID))
-       dispatch(getFavorites())
+       dispatch(addToFavorites(cards))
+       //dispatch(getFavorites())
     }
 
     const deleteFav = () => {
-        //const cardID = cards.id
-        dispatch(removeFromFavorites(cards.id))
+        const cardID = cards.id
+        dispatch(removeFromFavorites(cardID))
+        console.log(cardID)
         
     }
     
@@ -43,11 +44,11 @@ export default function Cards({ cards }) {
 
     }
 
-    const handleStyles = () => {
+    // const handleStyles = () => {
          
-        if (isFavorite) return 'red';
-        //console.log(cards.id)
-    }
+    //     if (isFavorite) return 'red';
+    //     //console.log(cards.id)
+    // }
 
     
     // if (cards.set.id.includes('mcd')) {
@@ -76,7 +77,8 @@ export default function Cards({ cards }) {
                     </div>
                     </Link>
                     <div className='btn'>
-                        <button className='favorite-btn' title='Add to Favorites' onClick={addFavorite} style={{color: handleStyles(cards.isFavorite) }}>
+                        <button className='favorite-btn' title='Add to Favorites' onClick={addFavorite} style={{color: 'black' }}>
+                        {/* <button className='favorite-btn' title='Add to Favorites' onClick={addFavorite} style={{color: handleStyles(cards.isFavorite) }}> */}
                             <AiIcons.AiFillHeart />
                         </button>
                         <button className='collection-btn' title='Add to Collection' onClick={deleteFav}>

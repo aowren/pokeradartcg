@@ -20,22 +20,38 @@ const MainPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const { user } = useSelector((state) => state.auth)
-    const {isShowing} = useSelector((state) => state.sidebarToggle)
+    //const {isShowing} = useSelector((state) => state.sidebarToggle)
 
-    useEffect(() => {
-        if (!user) {
-            navigate('/login')
-        }
+    // useEffect(() => {
+    //     if (!user) {
+    //         navigate('/login')
+    //     }
 
-        dispatch(getFavorites())
-    }, [])
+    //     dispatch(getFavorites())
+    // }, [])
 
     //const [currentPage, setCurrentPage] = useState(1)
 
-    const { cardData, isLoading, isNotSearching } = useSelector((state) => state.cardData);    
+    const { isLoading, isNotSearching } = useSelector((state) => state.cardData);    
+    let { cardData } = useSelector((state) => state.cardData);    
 
-    const [cardArr, setCardArr] = useState(cardData)
-    const [notLoading, setNotLoading] = useState(true)
+    //store the favorites array as cardData
+    // didClickFavorites redux?
+    // if
+
+    const {favoritesArray} = useSelector((state) => state.favorites)
+
+
+    console.log(favoritesArray)
+
+    const [cardArr, setCardArr] = useState(favoritesArray)
+
+    cardData = favoritesArray
+
+
+    //const [cardArr, setCardArr] = useState(cardData)
+
+   // const [notLoading, setNotLoading] = useState(true)
 
     // const sortFunctionAtoZ = () => {
     //     const arrCopy = [...cardArr];
@@ -61,12 +77,13 @@ const MainPage = () => {
         setCardArr(sortLowToHigh)
     } */
 
+
+
     const renderCards = () => {  
         //Remove McDonald's cards from array (they have weird params that cause errors when rendering)
         const cardArrMcd = cardArr
         const result = cardArrMcd.filter(card => !card.set.id.includes('mcd'))
-        console.log(result)
-
+        //console.log(result)
         return result.map(cards => ( <li key={cards.id}>
             <Cards cards={cards} />
         </li>));
@@ -78,6 +95,7 @@ const MainPage = () => {
     //     const lastPageIndex = firstPageIndex + PageSize;
     //     return cardData.slice(firstPageIndex, lastPageIndex);
     // }, [currentPage])
+
 
     useEffect(() => {
         setCardArr(cardData)

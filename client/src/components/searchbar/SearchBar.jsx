@@ -30,7 +30,7 @@ const SearchBar = () => {
         
     }, [searchInput]) */
     
-    console.log(cardData);
+    //console.log(cardData);
 
     const handleKeyPress = (e) => {
         

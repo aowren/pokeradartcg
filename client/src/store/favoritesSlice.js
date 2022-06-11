@@ -3,8 +3,8 @@ import favoritesService from "./favoritesService";
 
 
 const initialState = {
-    favortiesArray: [],
-    isFavorite: false,
+    favoritesArray: [], // this is being populated with the user object, not just the favorites
+    //isFavorite: false, // probably dont need isFavorite. just return the array of favorites from the user data
     isError: false,
     isSuccess: false,
     isLoading: false,
@@ -14,7 +14,7 @@ const initialState = {
 
 // Add card to favorites
 export const addToFavorites = createAsyncThunk('card/addFavorite', async(cardID, thunkAPI) => {
-    console.log(cardID)
+    //console.log(cardID)
     try {
         const token = thunkAPI.getState().auth.user.token
         return await favoritesService.addToFavorites(cardID, token)
@@ -36,10 +36,10 @@ export const getFavorites = createAsyncThunk('card/getFavoritesArray', async(_, 
 })  
 
 // Remove card from favorites
-export const removeFromFavorites = createAsyncThunk('card/removeFavorite', async(id, thunkAPI) => {
+export const removeFromFavorites = createAsyncThunk('card/removeFavorite', async(card, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token
-        return await favoritesService.removeFromFavorites(id, token)
+        return await favoritesService.removeFromFavorites(card, token)
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
         return thunkAPI.rejectWithValue(message)
@@ -57,8 +57,9 @@ export const favoritesSlice = createSlice ({
             .addCase(addToFavorites.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.isSuccess = true
-                state.favortiesArray.push(action.payload.cardID)
-                state.isFavorite = true
+                state.favoritesArray.push(action.payload)
+
+                //state.isFavorite = true
             })
             .addCase(addToFavorites.rejected, (state, action) => {
                 state.isLoading = false
@@ -69,11 +70,11 @@ export const favoritesSlice = createSlice ({
                 state.isLoading = true
             })
             .addCase(removeFromFavorites.fulfilled, (state, action) => {
-                state.favortiesArray = state.favortiesArray.filter(
+                state.favoritesArray = state.favoritesArray.filter(
                     (card) => card !== action.payload.id
                 )
                 state.isSuccess = true
-                state.isFavorite = false
+                //state.isFavorite = false
                 state.isLoading = false
             })
             .addCase(removeFromFavorites.rejected, (state, action) => {
@@ -87,7 +88,7 @@ export const favoritesSlice = createSlice ({
             .addCase(getFavorites.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.isSuccess = true
-                state.favortiesArray = action.payload
+                state.favoritesArray = action.payload
             })
             .addCase(getFavorites.rejected, (state, action) => {
                 state.isLoading = false

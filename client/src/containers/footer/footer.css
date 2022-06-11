@@ -33,3 +33,9 @@
     color: #c7a008;
 }
 
+.bgfooter .img{
+    object-fit: cover;
+    width: 10px;
+
+}
+
