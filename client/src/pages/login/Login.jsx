@@ -66,12 +66,12 @@ const Login = () => {
             <div className='register-header'>
                 <h1 className='logo'>PokéRadar</h1>
                 <Link to='/register' style={{ textDecoration: 'none' }}>
-                <h3 className='register-link'><FaSignInAlt /> Register</h3>
+                <h3 className='register-link'><span className='register-link-span'><FaSignInAlt /></span> Register</h3>
                 </Link> 
             </div>
             <div className='form-container'>
             <section className='form-heading'>
-                <h1 id='login'><FaSignInAlt /> Login</h1>
+                <h1 id='login'><span className='login-span'><FaSignInAlt /></span>Login</h1>
                 <p>Login to see your collection!</p>
             </section>
 

@@ -15,43 +15,18 @@ const setNameArr = cardData.cardData.map((i) => {
     return i.set.name
 })
 
-//let newSetNameArr = [];
-
-/*
-const setName = () => {
-
-    // for (let i = 0; i < setNameArr.length; i++) {
-    //     console.log(setNameArr[i])
-    // }
-
-    const newSetNameArr =setNameArr.map(i => {
-        return i
-    })
-    console.log(newSetNameArr)
-    return newSetNameArr
-} */
-
-
-const newSetNameArr = setNameArr.map(i =>  i)
-console.log(newSetNameArr)
-
-
-//console.log(setName)
-console.log('hello!!!')
-
 export const SidebarData = [
-  
+    
     {
         title: 'Set Name',
         icon: <BsIcons.BsCardList />,
         iconClosed: <IoIcons.IoMdArrowDropdown />,
         iconOpened: <IoIcons.IoMdArrowDropup />,
         path:'#',
-        subNav: [                     // import set names here // put checkbox in subnav
+        subNav: [                    
             {
-                title: newSetNameArr[1], //only one title allowed?
-                //title: 'test'
-            },
+                
+            }
         ],
     },
     {
@@ -67,20 +42,21 @@ export const SidebarData = [
             }
         ]
     },
-    {
-        title: 'Collection',
-        path: '/collection',
-        icon: <CgIcons.CgPokemon />
-    },
-    {
-        title: 'Favorites',
-        path: '/',
-        favorites: 'favorites',
-        icon: <CgIcons.CgCardHearts /> //onClick, return all user favorites || have a seperate favorites page?
-    },
-    {
-        title: 'Profile',
-        path: '/profile',
-        icon: <AiIcons.AiOutlineUser />
-    }
+    // {
+    //     title: 'Collection',
+    //     path: '/',
+    //     col: 'collection',
+    //     icon: <CgIcons.CgPokemon />
+    // },
+    // {
+    //     title: 'Favorites',
+    //     path: '/',
+    //     fav: 'favorites',
+    //     icon: <CgIcons.CgCardHearts />
+    // },
+    // {
+    //     title: 'Profile',
+    //     path: '/profile',
+    //     icon: <AiIcons.AiOutlineUser />
+    // }
 ]

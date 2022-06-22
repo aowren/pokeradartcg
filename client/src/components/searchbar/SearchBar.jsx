@@ -17,6 +17,8 @@ const SearchBar = () => {
     
     const { cardData } = useSelector((state) => state.cardData); // cardData from reducer
 
+    let {favoritesArray} = useSelector((state) => state.favorites)
+
     /*
     useEffect(() => {
 

@@ -14,13 +14,12 @@ const Footer = () => {
 
     return (
         <footer className='footer-container'>
-            <div className='bgfooter' style={{ backgroundImage: `url(${footerbg})`}}>
+            {/* <div className='bgfooter' style={{backgroundImage: `url(${footerbg})`}}> */}
             <div className='footer-content'>
                 <ul>
-                    <li className='list-header'>PokéRadar </li>
-                    <li className='list-content'>Contact:</li>
+                    <li className='list-header'>PokéRadar</li>
+                    <li className='list-content'>Contact: aowren21@gmail.com</li>
                 </ul>
-            </div>
             </div>
         </footer>
     )

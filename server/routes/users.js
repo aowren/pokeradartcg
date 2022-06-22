@@ -5,16 +5,17 @@ import { getFavorites, addToFavorites, removeFromFavorites } from '../controller
 
 import { protect } from '../middleware/authMiddleware.js';
 
-
-
+//User routes
 router.post('/', registerUser)
 router.post('/login', loginUser)
 router.get('/me', protect, getMe)
-//router.delete('/:id', protect, deleteUser)
+router.delete('/:id', protect, deleteUser)
 router.put('/changepassword', protect, changePassword)
 
-
-// Collection routes
+//Collection routes
+// router.get('/collection', protect, getCollection)
+// router.post('/collection', protect, addToCollection)
+// router.delete('/collection/:id', protect, removeFromCollection)
 
 // Favorites routes
 router.get('/favorites', protect, getFavorites)

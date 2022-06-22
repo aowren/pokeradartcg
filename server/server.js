@@ -3,8 +3,6 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 import usersRoutes from './routes/users.js';
-import collectionRoutes from './routes/collection.js'
-import favoritesRoutes from './routes/favorites.js';
 import pokemonApi from './routes/pokemonApi.js';
 import cardDetailsApi from './routes/cardDetailsAPI.js';
 import setSearchAPI from './routes/setSearchAPI.js';
@@ -31,9 +29,6 @@ connection.once('open', () => {
 //app.use('/setSearchAPI', setSearchAPI);
 app.use('/pokemonApi', pokemonApi);
 app.use('/users', usersRoutes);
-app.use('/collection', collectionRoutes);
-app.use('/favorites', favoritesRoutes);
-//app.use('*', (req, res) => res.status(404).json({ error: "not found"}));
 
 app.use(errorHandler);
 

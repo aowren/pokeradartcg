@@ -23,14 +23,7 @@ const userSchema = mongoose.Schema({
         // unique: true,
     },
     favorites: [Object],
-    // favorites: [{
-    //     id: String,
-    //     name: String,
-    //     //supertype: String,
-        
-
-    // }],
-    collected: [Object]
+    // collected: [Object]
 },
 {
     timestamps: true

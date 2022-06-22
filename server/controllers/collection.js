@@ -1,58 +1,75 @@
-import CollectionModel from '../models/collection.model.js';
+// import UsersModel from '../models/users.model.js';
+// import asyncHandler from 'express-async-handler'
 
-export const getCollection = async (req, res) => {
-    try {
-        const collection = await CollectionModel.find();
+// export const getCollection = asyncHandler(async (req, res) => {
 
-        console.log(collection)
-        
-        res.status(200).json(collection)
-    } catch (error) {
-        res.status(404).json({ message: error.message });
-    }
-};
+//     const user = await UsersModel.findById(req.user)
 
-export const addToCollection = async (req, res) => {
-    const cardID = req.body.cardID;
+//     //Check for user
+//      if (!user) {
+//          res.status(401)
+//          throw new Error('User not found')
+//     }
+   
+//    try {
+//         res.status(200).json(req.user.collected)   
+//    } catch (error) {
+//         res.status(401)
+//         throw new Error('Collected card not found')
+//    }    
 
-    const newCard = new CollectionModel({ cardID } );
+// }); 
 
-    try {
-        await newCard.save()
-        res.json("Added to collection!")
-    } catch (error) {
-        res.status(409).json({ message: error.message });
-    }
-}
+// export const addToCollection = asyncHandler(async (req, res) => {
+    
+//     const user = await UsersModel.findById(req.user)
 
-export const removeFromCollection = async (req, res) => {
-    const { cardID } = req.params;
+//    // Check for user
+//     if (!user) {
+//         res.status(401)
+//         throw new Error('User not found')
+//     }
+    
+//     const card = req.body.data
 
-    if (!mongoose.Types.ObjectId.isValid(cardID)) return res.status(404).send(`No card with id: ${cardID}`);
+//     console.log(card)
 
-    await CollectionModel.findByIdAndRemove(cardID);
+//     try {
+//         await UsersModel.findOneAndUpdate(
+//             { _id: req.user.id },
+//             { $push: { collected: card }}
+//         )
 
-    res.json({ message: "Card removed from collection." });
-}
+//     } catch (error) {
+//         res.status(409).json({message: error.message})
+//     }
+// })
 
+// export const removeFromCollection = asyncHandler(async (req, res) => {
 
+//     const user = await UsersModel.findById(req.user)
 
+//     console.log(user)
 
+//     const cardID = req.params.id
+//     console.log(cardID)
 
+//     //Check for user
+//     if (!user) {
+//         res.status(401)
+//         throw new Error('User not found')
+//     }
 
+//     const collectionArray = await UsersModel.find({collected: req.user.collected})
 
+//     try {
+//         await UsersModel.updateOne(
+//             { _id: req.user.id },
+//             { $pull: { collected: { id: cardID}}})
+//             res.status(200).json(collectionArray);
 
+//     } catch (error) {
+//         res.status(409).json({message: error.message})
 
-
-/*
-export const removeFromCollection = async (req, res) => {
-    CollectionModel.findByIdAndDelete(req.params.id)
-
-    try {
-        await 
-    } catch (error) {
-        res.status(400).json({ message: error.message})
-    }
-
-}
-*/
+//     }
+// })
