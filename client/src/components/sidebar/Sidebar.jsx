@@ -5,12 +5,9 @@ import './sidebar.css';
 import * as IoIcons from 'react-icons/io'
 import * as CgIcons from 'react-icons/cg';
 import * as AiIcons from 'react-icons/ai';
-import { SidebarData } from './SidebarData';
 import { setCardData } from '../../store/cardSlice';
 import { getFavorites, notIndex } from '../../store/favoritesSlice';
 import { favReset } from '../../store/favoritesSlice'
-import { getNotIndex } from '../../store/favoritesSlice';
-// import SubMenu from './SubMenu';
 
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -80,16 +77,6 @@ const Sidebar = () => {
                 </button>
             <ul className="sidebar-list">
             <h1 id="sidebar-title" onClick={onClick}>PokéRadar</h1>
-                {/* {SidebarData.map((item, index) => {
-                    return (
-                            <div className='row'>
-                                <SubMenu item={item} key={index} />
-                            </div>
-                    ); 
-                })} */}
-                {/* <button className='close-sidebar' onClick={() => setCloseSidebar(!closeSidebar)}> */}
-                {/* <button className='close-sidebar' onClick={() => setToggleSidebar(false)}> */}
-                {/* <li className='sidebar-list-item' onClick={handleFetchCollectionData}><CgIcons.CgPokemon /> <span className='list-text'>Collection</span></li> */}
                 <li className='sidebar-list-item' onClick={handleFetchFavoritesData}><CgIcons.CgCardHearts /> <span className='list-text'>Favorites</span></li>
                 <Link to={'/profile'} style={{ textDecoration: 'none', color: 'none' }} activestyle={{ color: 'none' }}>
                    <li className='sidebar-list-item'><AiIcons.AiOutlineUser /> <span className='list-text'>Profile</span></li>

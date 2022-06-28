@@ -8,7 +8,7 @@ import { FaUser, FaSignInAlt } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 import Spinner from '../../components/spinner/Spinner'
 import './register.css'
-import video from '../../content/bg.mp4'
+import video from '../../content/bg1.mp4'
 
 const Register = () => {
 
@@ -32,7 +32,7 @@ const Register = () => {
         }
     
         if (isSuccess || user) {
-          navigate('/') // it will automatically send you to the main page ('/') if you are logged in. but it doesn't render the components until page is refreshed
+          navigate('/')
         }
     
         dispatch(reset())
@@ -136,56 +136,6 @@ const Register = () => {
       </section>
       </div>
     </>
-      
-/* 
-      <section className='form'>
-        <form onSubmit={onSubmit}>
-            <div className="form-group">
-                <input type="text" 
-                    className="form-control" 
-                    id='username' 
-                    value={username} 
-                    placeholder='Enter your username' 
-                    onChange={onChange}
-                />
-            </div>
-            <div className="form-group">
-                <input type="text" 
-                    className="form-control" 
-                    id='email' 
-                    value={email} 
-                    placeholder='Enter your email' 
-                    onChange={onChange}
-                />
-            </div>
-            <div className="form-group">
-                <input type="password" 
-                    className="form-control" 
-                    id='password' 
-                    value={password} 
-                    placeholder='Enter your password' 
-                    onChange={onChange}
-                />
-            </div>
-            <div className="form-group">
-                <input type="password" 
-                    className="form-control" 
-                    id='password2' 
-                    value={password2} 
-                    placeholder='Confirm password' 
-                    onChange={onChange}
-                />
-            </div>
-            <div className="form-group">
-                <button type='submit' className='btn btn-block'> 
-                    Submit
-                </button>
-            </div>
-        </form>
-      </section>
-      </div>
-      </> */
-      
     )
 }
 

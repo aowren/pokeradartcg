@@ -1,13 +1,15 @@
 {
   "name": "server",
+  "engines": {
+    "node": "v16.15.0",
+    "npm": "8.5.5"
+  },
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
-    
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -27,10 +29,12 @@
     "mongodb": "^4.2.2",
     "mongoose": "^6.1.5",
     "node-fetch": "^3.1.0",
-    "nodemon": "^2.0.15",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
     "pokemontcgsdk": "^2.0.0",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
   }
 }

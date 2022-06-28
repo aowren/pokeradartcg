@@ -105,6 +105,11 @@ span {
     color: #ee1515;
 }
 
+.favorite-btn:hover {
+    cursor: pointer;
+    color: #ee1515 !important;
+}
+
 .btn button:active {
     transform: rotate(30deg);    
 }

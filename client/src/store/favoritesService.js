@@ -17,7 +17,6 @@ const addToFavorites = async (card, token) => {
 }
 
 // Get favorites array
-
 const getFavorites = async (token) => {
     const config = {
         headers: {
@@ -38,7 +37,7 @@ const removeFromFavorites = async (cardID, token) => {
         },
     } 
     console.log(cardID)
-    const REMOVE_FAVORITES_API_URL = `http://localhost:5000/users/favorites/${cardID}` // this is not sending the cardID to the backend, but the route is correct
+    const REMOVE_FAVORITES_API_URL = `http://localhost:5000/users/favorites/${cardID}`
 
     const response = await axios.delete(REMOVE_FAVORITES_API_URL, config)
     const data = response.data

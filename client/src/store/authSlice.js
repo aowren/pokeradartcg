@@ -44,6 +44,7 @@ export const logout = createAsyncThunk('auth/logout', async () => {
 export const deleteUser = createAsyncThunk('auth/deleteUser', async(user, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token
+        console.log(token)
         return await authService.deleteUser(user, token)
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();

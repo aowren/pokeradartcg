@@ -23,14 +23,6 @@ const WarningMessage = (props) => {
         if (isSuccess) {
             toast.success(message)
             dispatch(reset())
-
-
-            //Return to register screen after 3 seconds // maybe we need to navigate from the profile page instead?
-            // setTimeout(() => {
-            //     navigate('/register') 
-            // }, 3000)
-
-            // navigate('/register')
         }
 
     }
@@ -43,7 +35,6 @@ const WarningMessage = (props) => {
             <div className='warning-message-btns'>
                 <button className='delete-account-btn' onClick={onDelete}>Delete Account</button>
                 <button className='dont-delete-btn' onClick={() => props.setTrigger(false)}>Don't Delete</button>
-                {/* <btn className='dont-delete-btn'>Don't Delete</btn> */}
             </div>
         </div>
 

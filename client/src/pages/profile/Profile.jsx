@@ -20,9 +20,9 @@ const Profile = () => {
     
     const {user, isSuccess, isError, message, isDeleted} = useSelector((state) => state.auth)
     
-    const {username} = useSelector((state) => state.auth.user) //causing the delete functiuon to not route
+    const {username} = useSelector((state) => state.auth.user)
 
-    const email = useSelector((state) => state.auth.user.email) //causing the delete function to not route to the register page
+    const email = useSelector((state) => state.auth.user.email)
     
     const [warningMessage, setWarningMessage] = useState(false);
 
@@ -97,8 +97,6 @@ const Profile = () => {
                     <li>
                         <span className="button-span"><button className="delete-account-button" onClick={() => setWarningMessage(true)}>Delete Account</button></span> 
                     </li>
-                    {/* <li>Cards Collected: {}</li> */}
-                    {/* <li>Favorites: {}</li> */}
                 </ul>
             </div>
             <div className="warning-popup">

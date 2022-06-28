@@ -4,7 +4,7 @@ import axios from 'axios'
 export const getCardData = createAsyncThunk(
     "cardData/getCardData",
     async (searchInput) => {
-        const response = await axios(`http://localhost:5000/pokemonApi?searchInput=${searchInput}`);
+        const response = await axios(`https://pokeradar.herokuapp.com/pokemonApi?searchInput=${searchInput}`);
         return response.data;
     }
 );

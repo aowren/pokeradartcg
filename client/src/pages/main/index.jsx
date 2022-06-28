@@ -8,9 +8,7 @@ import Spinner from '../../components/spinner/Spinner';
 import NotSearching from "../../components/not_searching/NotSearching";
 
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { getFavorites } from "../../store/favoritesSlice";
-import { isShowing } from "../../store/sidebarSlice"
 
 const MainPage = () => {
 

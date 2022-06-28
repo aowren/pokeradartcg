@@ -1,16 +1,10 @@
 import React from "react";
-//import './CardDetails';
 
 import './card_details.css';
 import DetailsPriceComponent from "../price_components/DetailsPriceComponent";
-import { useState, useEffect } from "react";
-import axios from 'axios';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import * as AiIcons from 'react-icons/ai'; 
-import * as CgIcons from 'react-icons/cg';
-import {addToFavorites, removeFromFavorites } from '../../store/favoritesSlice';
 
 
 

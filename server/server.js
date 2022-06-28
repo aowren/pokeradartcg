@@ -3,17 +3,15 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 import usersRoutes from './routes/users.js';
-import pokemonApi from './routes/pokemonApi.js';
-import cardDetailsApi from './routes/cardDetailsAPI.js';
-import setSearchAPI from './routes/setSearchAPI.js';
+import pokemonApi from './routes/pokemonAPI.js';
 
 import { errorHandler } from './middleware/errorMiddleware.js';
 
 import dotenv from 'dotenv';
-dotenv.config()
+dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -23,10 +21,18 @@ mongoose.connect(uri);
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection established successfully.")
-})
+});
 
-//app.use('/cardDetailsApi', cardDetailsApi)
-//app.use('/setSearchAPI', setSearchAPI);
+// mongoose.connect(uri, {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true
+//   }).then(res=>{
+//           console.log("DB Connected!")
+//   }).catch(err => {
+//     console.log(Error, err.message);
+//   })
+
 app.use('/pokemonApi', pokemonApi);
 app.use('/users', usersRoutes);
 

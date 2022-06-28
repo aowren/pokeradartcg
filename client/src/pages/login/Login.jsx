@@ -7,7 +7,7 @@ import { login, reset } from '../../store/authSlice'
 import { toast } from 'react-toastify'
 import Spinner from '../../components/spinner/Spinner'
 import {FaSignInAlt} from 'react-icons/fa'
-import video from '../../content/bg.mp4'
+import video from '../../content/bg1.mp4'
 import './login.css'
 
 const Login = () => {

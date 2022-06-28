@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Link, renderMatches } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import './cards.css';
 import * as AiIcons from 'react-icons/ai'; 
-import * as CgIcons from 'react-icons/cg';
 
 import PriceComponent from '../price_components/PriceComponent';
 
-import { addFavorite, addToFavorites, getFavorites, removeFavorite, removeFromFavorites } from '../../store/favoritesSlice';
-//const Cards = ({ data: { name, set, set: { id }, rarity, images, images: { small } }}) => {
-
-// create button components so we can wrap the card div in <Link /> to route the details page
-
+import { addToFavorites, removeFromFavorites } from '../../store/favoritesSlice';
 
 export default function Cards({ cards }) {
 
@@ -21,7 +16,6 @@ export default function Cards({ cards }) {
 
     })
 
-    // console.log(favoritesArray)
 
     const dispatch = useDispatch();
     
@@ -30,7 +24,6 @@ export default function Cards({ cards }) {
         const cardID = cards.id
         console.log(cardID)
 
-        // card is removed from array, but on the page it just removes the last card object
         if (favoritesArray.includes(cards)) {
             dispatch(removeFromFavorites(cards.id))
             
@@ -38,10 +31,6 @@ export default function Cards({ cards }) {
             dispatch(addToFavorites(cards))
             console.log(favoritesArray)
         }
-    }
-
-    const addToCollection = () => {
-
     }
 
     let buttonColor = {color: 'black'}
@@ -54,7 +43,6 @@ export default function Cards({ cards }) {
     })
 
     return (
-                // <Link to={`/details/${cards.id}`} state={cards} style={{ textDecoration: 'none' }} activeStyle={{ color: 'none' }}> 
             <div className='card-container' >
                 <div className='card-container-left'>
                 <Link to={`/details/${cards.id}`} style={{ textDecoration: 'none' }} activestyle={{ color: 'none' }}>

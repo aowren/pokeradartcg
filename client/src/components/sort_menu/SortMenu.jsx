@@ -1,17 +1,10 @@
 import React from 'react'
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {sortAtoZ, sortHighToLow, sortLowToHigh} from '../../store/sortBySlice'
 import './sort_menu.css'
-// Dropdown list categories
-//const categories = ["A to Z", "Price: High to Low", "Price: Low to High"];
-//const sort = ["Sort By"];
-
 
 
 const SortMenu = () => {
-
-    const dispatch = useDispatch();
 
     const [value, setValue] = useState('AtoZ')
 
@@ -33,59 +26,6 @@ const SortMenu = () => {
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-const menuItems = [
-    {   
-        title: "A to Z", //{currentTitle}
-        submenu: [
-            {
-                title: "A to Z"
-            },
-            {
-                title: "High to Low"
-            },
-            {
-                title: "Low to High"
-            }
-        ]
-    },
-]
-*/
-/*
-const SortMenu = () => {
-
-    //const [title, setTitle] = useState('A to Z')
-    //const currentTitle = setTitle()
-
-    const [sort, setSort] = useState("")
-
-    return (
-        <div className='sort-menu-container'>
-            <ul className='sort-menu-ul'>
-               { menuItems.map((menu, index) => {
-                   return (
-                    <li className="menu-items" key={index}>
-                    <a href="/#">{menu.title}</a>
-                   </li>
-                   )
-               }) }
-            </ul>
-        </div>
-    )
-}
-*/
 export default SortMenu
 
 

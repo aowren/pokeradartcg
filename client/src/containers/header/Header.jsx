@@ -33,7 +33,6 @@ const Header = () => {
             <HamburgerMenu />
             <SortButton props={cardData}/>
             <SearchBar />
-            {/* <SortMenu parentCallback={parentCallback}/> */}
             <div id='header-profile-container'>
                 <button id='header-logout-button' onClick={onLogout}><FaSignOutAlt /> Log Out</button>
             </div>
