@@ -2,7 +2,8 @@
 
 Web app that allows users to track Pokémon cards they want to collect.
 
-[pokeradar demo](https://user-images.githubusercontent.com/57423395/176061546-bb021cb5-8d97-4c0a-92ce-f97284d6ba83.gif)
+![pokeradar demo](https://user-images.githubusercontent.com/57423395/176061663-09ac84f7-a5bc-4c64-b5d9-1796dd3872bf.gif)
+
 
 ## Description
 
