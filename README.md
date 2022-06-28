@@ -13,8 +13,21 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* react
+* reduxjs/toolkit
+* react-router-dom
+* react-toastify
+* bcrypt
+* dotenv
+* mongodb
+* mongoose
+* pokemontcgsdk
+* jsonwebtoken
+* cors
+* express
+
+### Dev-dependencies
+* nodemon
 
 ### Installing
 
